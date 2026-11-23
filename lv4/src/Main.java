@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class Main {
@@ -16,10 +15,22 @@ public class Main {
 
         for(int i =0;i< broj_studenata;i++){
             studenti[i] = new Student();
-            studenti[i].setIme("Ivan "+i);
+            System.out.print("Unesite ime studenta " + i + ":");
+            studenti[i].setIme(input.next());
+            System.out.print("Unesite ocjenu studenta: ");
+
+            while(!input.hasNextInt()){
+                System.out.print("Unesite ocjenu studenata: ");
+                input.next();
+            }
+            studenti[i].setOcjena(input.nextInt());
         }
+
+
 
         Imenik imenik = new Imenik(studenti);
         imenik.ispisStudenta();
+
+        imenik.pronadjiStudentaPoImenu(input.next());
     }
 }
