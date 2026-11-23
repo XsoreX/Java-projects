@@ -1,16 +1,25 @@
 import java.sql.SQLOutput;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
+        Student[] studenti = new Student[broj_studenata];
+        System.out.print("Unesite broj studenata: ");
 
-        Student student1 = new Student("John","Pork",123,5);
-        Student student2 = new Student("Adam","Tomokovic",321,5);
-        Student student3 = new Student("Vid","Mlikota",8877,5);
-        Student student4 = new Student("Ivica","Lukic",1122,1);
+        while(!input.hasNextInt()){
+            System.out.print("Unesite broj studenata: ");
+            input.next();
+        }
+
+        int broj_studenata = input.nextInt();
+        Student[] studenti = new Student[broj_studenata];
+
+        for(int i =0;i< broj_studenata;i++){
+            studenti[i]=new Student();
+        }
 
 
-        Imenik imenik = new Imenik(student1,student2,student3,student4);
 
 
 
