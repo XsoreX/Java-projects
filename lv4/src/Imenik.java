@@ -6,9 +6,9 @@ public class Imenik {
         this.lista=lista;
     }
 
-    public void ispisStudenta(Student[] lista){
+    public void ispisStudenta(){
         for(int i = 0;i<lista.length;i++){
-            lista[i].ispisiPodatke();
+            this.lista[i].ispisiPodatke();
         }
     }
 

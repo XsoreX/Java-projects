@@ -7,7 +7,11 @@ public class Student {
     private int jmbag;
     private int ocjena;
 
+
     private static int brojStudenata=0;
+
+    public Student(){
+    }
 
     public String getIme() {
         return ime;
@@ -55,5 +59,7 @@ public class Student {
         System.out.println("Ocjena: "+ocjena);
         System.out.print("\n");
     }
+
+
 
 }
