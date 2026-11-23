@@ -22,6 +22,15 @@ public class Imenik {
         }
     }
 
+    public void pronadjiStudentaPoJMBAG(int jmbag){
+        for(int i = 0; i<this.lista.length;i++){
+            if(Objects.equals(this.lista[i].getJmbag(),jmbag)){
+                System.out.println("Student sa " + jmbag + " jmbag je pronađen!");
+                System.out.println("Student se zove: " + this.lista[i].getIme());
+            }
+        }
+    }
+
 
 
 

@@ -18,12 +18,13 @@ public class Main {
             System.out.print("Unesite ime studenta " + i + ":");
             studenti[i].setIme(input.next());
             System.out.print("Unesite ocjenu studenta: ");
-
             while(!input.hasNextInt()){
                 System.out.print("Unesite ocjenu studenata: ");
                 input.next();
             }
             studenti[i].setOcjena(input.nextInt());
+            System.out.print("Unesite JMBAG studenta: ");
+            studenti[i].setJmbag(input.nextInt());
         }
 
 
@@ -31,6 +32,9 @@ public class Main {
         Imenik imenik = new Imenik(studenti);
         imenik.ispisStudenta();
 
-        imenik.pronadjiStudentaPoImenu(input.next());
+        //System.out.print("Pretrazivanje po imenu: ");
+        //imenik.pronadjiStudentaPoImenu(input.next());
+        System.out.print("Pretrazivanje po JMBAG-u: ");
+        imenik.pronadjiStudentaPoJMBAG(input.nextInt());
     }
 }
